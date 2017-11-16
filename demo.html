@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="AhianZhang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>示例</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<!-- 主题样式 -->
+	<link rel="stylesheet" href="css/theme/blood.css">
+	<!-- 语法高亮样式 -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	
+</head>
+<body>
+	<div class="reveal"> 
+       <div class="slides"> 
+        <section>
+        <h1>欢迎观看reveal展示</h1>
+        <p><small>
+        	Created by <a href="https://github.com/AhianZhang">AhianZhang</a> 
+        	Blog : <a href="https://ahianzhang.top">象帝浮华生</a>
+        </small></p>
+        </section> 
+        <section>
+                   <h2>什么是reveal?</h2>
+					<p class="fragment">
+						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.</p>
+						<hr class="fragment">
+						<p class="fragment">
+						reveal.js 能让你使用HTML创建精美的交互式幻灯片，在这里将为你展示它都能做什么
+					</p>
+				
+        </section> 
+        	  	
+		<section>
+		<!-- 垂直滚动，在section中再嵌套section -->
+			<section ><h2>这个是垂直滚动</h2>
+			<p>你可以使用<strong>空格键</strong>或者<strong>鼠标点击</strong>右下角或者使用键盘<strong>方向键</strong>进行切换，<strong>ESC</strong>切换到全局视图 <strong>F</strong>全屏播放</p>
+			<br>
+			<p><strong><a href="#/next">↓↓↓</a></strong></p>
+			</section>
+			
+			
+			<section data-background="img/2.jpg" id="next">
+             <p><small>	它可以用图片做背景</small></p>
+			</section>
+			
+			<!-- 默认是全屏，可以修改尺寸  data-background-repeat="repeat" data-background-size="100px"-->
+			<section data-background="img/1.gif" >
+             <p><small>	它可以用GIF做背景</small></p>
+			</section>
+			
+			<section data-background-video="video/Rallye.mp4" data-background-color="#000000">
+             <p><small>	
+             <!-- 支持标签样式修改 -->
+             <div style="color: black;">也可以用视频做背景</div>
+             </small></p>
+			</section>
+		</section>
+       <section data-background="#4d7e65" data-background-transition="fade" >
+    <section>
+     <h2>碎片fragment</h2>
+     <p class="fragment">fragment能把你的一页文字</p>
+     <p class="fragment">分步显示出来</p>
+      <p class="fragment">让我们看看fragment还有哪些</p>
+       <p class="fragment">功能</p>
+       </section>
+       <section>
+       	<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+       </section>
+       </section>
+       <section  data-background-transition="Concave">
+        <section>
+       <h2>代码展示</h2>
+      
+       <p>高亮效果</p>
+       <pre>
+       	<code>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}	
+       	</code>
+       </pre>
+       </section>
+        <section>
+       <p>文字背景高亮</p>
+              <pre>
+       	<code class="javascript"  data-noescape >
+       	<mark>function</mark> linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}	
+       	</code>
+       </pre>
+       </section>
+       </section>
+      
+<section>
+<section data-markdown>
+	<h2>Markdown语法支持</h2>
+ <textarea  type="text/template">
+        ## Page title
+
+        A paragraph with some text and a [link](http://hakim.se).
+    </textarea >
+</section>
+<section data-markdown="example.md"  
+         data-separator="^\n\n\n"  
+         data-separator-vertical="^\n\n"  
+         data-separator-notes="^Note:"  
+         data-charset="UTF-8">
+</section>
+</section>
+<section>
+					<h2>智能引用</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+</section>
+<section>
+<h6>Reveal.initialize配置属性 表格展示</h6>
+<section>
+					
+					<small>
+					<table>
+						<thead>
+							<tr>
+								<th>参数</th>
+								<th>描述</th>
+								<th>默认值</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>controls</td>
+								<td>是否在右下角展示控制条</td>
+								<td>true</td>
+							</tr>
+							<tr>
+								<td>progress</td>
+								<td>是否展示进度条</td>
+								<td>true</td>
+							</tr>
+							<tr>
+								<td>slideNumber</td>
+								<td>$是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' (常用)，表示当前页/总页数</td>
+								<td>false</td>
+							</tr>
+							<tr>
+								<td>history</td>
+								<td>是否将每个幻灯片改变加入到浏览器的历史记录中去</td>
+								<td>false</td>
+							</tr>
+							<tr>
+								<td>keyboard</td>
+								<td>是否启用键盘键导航</td>
+								<td>true</td>
+							</tr>
+							<tr>
+								<td>overview</td>
+								<td>是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式</td>
+								<td>true</td>
+							</tr>
+							<tr>
+								<td>center</td>
+								<td>是否将幻灯片垂直居中</td>
+								<td>true</td>
+							</tr>
+								<tr>
+								<td>touch</td>
+								<td>是否在触屏设备上启用触摸滑动切换</td>
+								<td>true</td>
+							</tr>
+								<tr>
+								<td>loop</td>
+								<td>是否循环演示</td>
+								<td>false</td>
+							</tr>
+								<tr>
+								<td>rtl</td>
+								<td>是否将演示的方向变成RTL，即从右往左</td>
+								<td>false</td>
+							</tr>
+							
+						</tbody>
+					</table>
+					</small>
+				</section>
+				<section>
+				<small>
+					<table>
+						<thead>
+							<tr>
+								<th>参数</th>
+								<th>描述</th>
+								<th>默认值</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>fragments</td>
+								<td>全局开启和关闭碎片</td>
+								<td>true</td>
+							</tr>
+							<tr>
+								<td>autoSlide</td>
+								<td>两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>transition</td>
+								<td>切换过渡效果，有none/fade/slide/convex/concave/zoom</td>
+								<td>'default'</td>
+							</tr>
+							<tr>
+								<td>transitionSpeed</td>
+								<td>过渡速度，default/fast/slow</td>
+								<td>'default'</td>
+							</tr>
+							<tr>
+								<td>mouseWheel</td>
+								<td>是否启用通过鼠标滚轮来切换幻灯片</td>
+								<td>true</td>
+							</tr>
+						</tbody>
+					</table>
+					</small>
+				</section>
+				</section>
+
+<section>
+	<h1>END</h1>
+	<p>如想了解更多请参考<strong><a href="https://github.com/hakimel/reveal.js">官方文档</a></strong></p>
+	<p>本例源码已上传到<a href="">GitHub</a></p>
+</section>
+       </section>
+
+       </div> 
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+<script> 
+Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'zoom',   // 定义全局滑动效果None Fade Slide Convex Concave Zoom 只有在有背景时才会显示
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', async: true, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', async: true, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/notes/notes.js' }
+				]
+			});
+   
+   
+</script>
+</body>
+</html>
